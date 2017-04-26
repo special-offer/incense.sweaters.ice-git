@@ -1,0 +1,32 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "incense.sweaters.ice"
+        },
+        "com.darktalker.cordova.screenshot": {
+            "PACKAGE_NAME": "incense.sweaters.ice"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/com.darktalker.cordova.screenshot/www/Screenshot.js",
+            "id": "com.darktalker.cordova.screenshot.screenshot",
+            "pluginId": "com.darktalker.cordova.screenshot",
+            "merges": [
+                "navigator.screenshot"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.1",
+        "com.darktalker.cordova.screenshot": "0.1.5"
+    }
+}

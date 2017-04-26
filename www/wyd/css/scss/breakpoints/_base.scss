@@ -1,0 +1,330 @@
+/*
+----------------------------------------
+Helper Classes
+----------------------------------------
+*/
+
+.table{
+	display: table;
+	width: 100%;
+	height: 100%;
+
+	.table-cell{
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.overlay{
+	display: none;
+	color: $white;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+
+
+
+/*
+----------------------------------------
+General
+----------------------------------------
+*/
+
+
+
+
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+
+
+
+/*
+----------------------------------------
+Info * Help
+----------------------------------------
+*/
+
+/* Loading Message & Help */
+
+#loadingMessage{
+	font-family: "TradeGothic LT Extended";
+	background-color: rgba(72,46,132,1.0);
+	color: #fff;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0px;
+	left: 0px;
+	transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+}
+
+#loadingMessage.loaded{
+	background-color: rgba(72,46,132,0.7);
+}
+
+
+#loadingMessage .table{
+	display: table;
+	width: 100%;
+	height: 100%;
+
+}
+
+#loadingMessage .table div{
+	display: table-cell;
+	vertical-align: middle;
+	opacity: 0;
+	transition: opacity 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+}
+#loadingMessage.loaded .table div{opacity: 1;}
+
+
+#info{
+	display: none;
+	color: $white;
+	background-color: $purple;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	h1{
+		font-family: $triple;
+		font-weight: normal;
+		font-size: 350px;
+		line-height: 0.6999999;
+		letter-spacing: 5pt;
+		position: absolute;
+		text-align: center;
+		margin: 0 !important;
+		left: 50%;
+		top: 50%;
+		@include transform(translateY(-50%) translateX(-50%));
+		width: 202px;
+		height: 236px;
+		overflow: hidden;
+		word-wrap: none;
+		white-space: nowrap;
+
+		span{
+			height: 100%;
+			width: 60px;
+			display: inline-block;
+			position: relative;
+			top: -8px;
+			transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+		}
+
+		.w{
+			@include transform(translateY(-105%));
+		}
+
+		.y{
+			@include transform(translateY(105%));
+			left: 3px;}
+
+		.d{
+			@include transform(translateY(-105%));
+			left: -9px;}
+
+		.q{
+			@include transform(translateY(105%));
+			left: -24px;
+			width: 46px;}
+
+		&.loaded{
+			.w,.y,.d,.q{
+				@include transform(translateY(0px));	
+			}
+		}
+
+
+
+
+
+	}
+
+	h2{
+		font-family: $trade;
+		font-weight: normal;
+		font-size: 1rem;
+		margin: 0 !important;
+		line-height: 1;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		left: 0px;
+		bottom: $gutter;
+		width: 100%;
+		opacity: 0;
+		letter-spacing: 0.33pt;
+			transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+
+		&.loaded{
+			opacity: 1;
+		}
+	}
+
+	h3{
+		width: 100px;
+		height: 13px;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		background: url(../img/s-o.png) no-repeat center center;
+		background-size: contain;
+		font-family: $trade;
+		font-weight: normal;
+		font-size: 1rem;
+		margin: 0 !important;
+		line-height: 1;
+		position: absolute;
+		left: 50%;
+		@include transform(translateX(-50%));
+
+		top: $gutter;
+		opacity: 0;
+		transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+
+		&.loaded{
+			opacity: 1;
+		}
+	}
+
+}
+
+
+
+
+/*
+----------------------------------------
+Screenshot Gate
+----------------------------------------
+*/
+
+
+#screenshot-gate{
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+	background: transparent;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+
+	&:active{
+		background-color: rgba(255,255,255,0.85);
+	}
+}
+
+body.info-active, body.help-active{
+	#screenshot-gate{display: none;}
+}
+
+
+
+
+/*
+----------------------------------------
+WYD05
+----------------------------------------
+*/
+
+
+
+
+audio{
+	display: none !important;
+}
+
+#wyd05-content{
+	span{
+		text-transform: uppercase;
+		font-family: $triple;
+		font-size: 160px;
+	}
+}
+
+
+
+
+/*
+----------------------------------------
+WYD07
+----------------------------------------
+*/
+
+
+#wyd07{
+
+	#wyd07-content{
+		img{
+			display: none;
+			position: absolute;
+			max-width: 66.6%;
+			height: auto;
+			display: block;
+			left: 50%;
+			top: 50%;
+			@include transform(translateX(-50%) translateY(-50%));
+			transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+		}
+
+		&:nth-last-child(-n+3) {
+			display: block;
+		}
+	}
+}
+
+
+
+
+
+/*
+----------------------------------------
+WYD08
+----------------------------------------
+*/
+
+
+#wyd08{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0.85;
+}
+
+
+
+
+/*
+----------------------------------------
+WYD10
+----------------------------------------
+*/
+
+
+#wyd10{
+
+	#wyd10-content{
+		padding: 24px;
+		img{
+			width: 240px;
+			height: auto;
+			display: inline-block;
+			margin-bottom: 12px;
+		}
+	}
+}
+

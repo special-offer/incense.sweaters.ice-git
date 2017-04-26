@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "incense.sweaters.ice"
+        },
+        "com.darktalker.cordova.screenshot": {
+            "PACKAGE_NAME": "incense.sweaters.ice"
+        }
+    },
+    "dependent_plugins": {}
+}

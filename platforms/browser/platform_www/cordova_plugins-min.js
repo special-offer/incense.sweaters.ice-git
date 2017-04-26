@@ -1,0 +1,1 @@
+cordova.define("cordova/plugin_list",function(o,e,r){r.exports=[{file:"plugins/com.darktalker.cordova.screenshot/www/Screenshot.js",id:"com.darktalker.cordova.screenshot.screenshot",pluginId:"com.darktalker.cordova.screenshot",merges:["navigator.screenshot"]}],r.exports.metadata={"cordova-plugin-whitelist":"1.2.1","com.darktalker.cordova.screenshot":"0.1.5"}});

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'TradeGothic LT Extended';
+  src: url("../fonts/Trade Gothic LT Extended.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Trade Gothic LT Extended.eot?#iefix") format("embedded-opentype"), url("../fonts/Trade Gothic LT Extended.woff") format("woff"), url("../fonts/Trade Gothic LT Extended.ttf") format("truetype"), url("../fonts/Trade Gothic LT Extended.svg#1aaf2ddadbcd7f35c674457a7a032015") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400; }
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+
+.info {
+  font-family: "TradeGothic LT Extended";
+  background-color: #482e84;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0px;
+  left: 0px;
+  -webkit-transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+  transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95); }
+
+.info.loaded {
+  background-color: rgba(72, 46, 132, 0.7); }
+
+.info .table {
+  display: table;
+  width: 100%;
+  height: 100%; }
+
+.info .table div {
+  display: table-cell;
+  vertical-align: middle;
+  opacity: 0;
+  -webkit-transition: opacity 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+  transition: opacity 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95); }
+
+.info.loaded .table div {
+  opacity: 1; }
